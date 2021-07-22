@@ -25,11 +25,12 @@ const User = (props) => {
             </Modal>
                     
             <Col md="4" style={{ marginBottom: "1rem" }}>
+                
                 <Card>
                     <Card.Body>
 
                         <Card.Subtitle className="mb-2 text-muted">
-                            Codetrain User
+                            Contact Details
                         </Card.Subtitle>
                         <Card.Title>{props.userInfo.name}</Card.Title>
                         <Card.Text>

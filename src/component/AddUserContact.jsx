@@ -34,7 +34,7 @@ class AddUserContact extends Component {
     render() {
         return (
             <>
-            <h1 className="heading">User Form</h1>
+            <h1 className="heading">Contact Form</h1>
             <Form onSubmit={this.handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>First Name</Form.Label>

@@ -14,6 +14,7 @@ section{
     width: 100%;
     background: #001923 ;
     color: #000;
+    overflow: hidden;
 }
 section::before{
     content: "";
@@ -45,7 +46,9 @@ section::after{
     border-right: 1px solid rgba(255,255,255,0.1);
     border-bottom: 1px solid rgba(255,255,255,0.1);
     border-radius: 10px;
+    overflow: hidden;
     backdrop-filter: blur(25px);
+
 }
 .container::before{
     content: "";
