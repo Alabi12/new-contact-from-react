@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { addUser }from '../actions/userActions'
 import "./style.css"
 
 class AddUserContact extends Component {
@@ -15,7 +17,7 @@ class AddUserContact extends Component {
     handleChange = (e) => {
         e.preventDefault();
         this.setState({
-            [e.target.name]: e.target.value,
+            [e.target.name]: e.target.value
         })
         console.log(this.state);
     }
@@ -77,5 +79,8 @@ class AddUserContact extends Component {
         );
     }
 }
+const mapDispatchToProps = {
+    addNewUser: addUser,
+}
 
-export default AddUserContact;
+export default connect(null, mapDispatchToProps) (AddUserContact);

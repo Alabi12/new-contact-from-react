@@ -1,9 +1,11 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
+import { connect }  from 'react-redux';
 import User from './User';
 
 
 const Users = (props) => {
+ 
     return (
         <>
     <h1 className="heading2">Form Output</h1>
@@ -20,6 +22,11 @@ const Users = (props) => {
         </>
     );
 }
+const mapStateToProps = (state) => {
+    return {
+        users : state.users,
+    }
+}
 
-export default Users;
+export default connect(mapStateToProps)(Users);
 
