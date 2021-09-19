@@ -80,7 +80,7 @@ class AddUserContact extends Component {
     }
 }
 const mapDispatchToProps = {
-    addNewUser: addUser,
+    addUser: addUser,
 }
 
 export default connect(null, mapDispatchToProps) (AddUserContact);

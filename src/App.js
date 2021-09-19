@@ -9,33 +9,10 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            users: [
-                {
-                    firstname: "Robert",
-                    lastname: "Alabi",
-                    email: "wolo22001@gmail.com",
-                    contact: "024548752",
-                    id: "158794klkj"
-                },
-                {
-                  firstname: "Roland",
-                  lastname: "Yaw",
-                  email: "wolo22001@gmail.com",
-                  contact: "024548752",
-                  id: "158794khhj"
-                },
-                {
-                  firstname: "Benjamin",
-                  lastname: "Asibi",
-                  email: "wolo22001@gmail.com",
-                  contact: "024548752",
-                  id: "16698794klkj"
-                },
-
-            ]
+            users: []
         }
     }
-    addNewUser = (user) => {
+    addUser = (user) => {
         user.id = Math.random().toString()
         this.setState({
             users: [...this.state.users, user]
@@ -58,7 +35,7 @@ class App extends Component {
                 <Container fluid className="App">
                     <Row>
                         <Col md="4">
-                            <AddUserContact addUser={this.addNewUser} />
+                            <AddUserContact addUser={this.addUser} />
                         </Col>
                         <Col>
                             <Users usersData={this.state.users} DeleteUser={this.DeleteUser} editUser={this.editUser} />
